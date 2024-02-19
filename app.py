@@ -4,7 +4,7 @@ from app_functions import process_audio_files
 
 app = Flask(__name__)
 
-@app.route('/audio-fraud-detection', methods=['POST'])
+@app.route('/audio-fraud-detection', methods=['GET'])
 def audio_fraud_detection():
     if 'audio_files' not in request.files:
         return jsonify({"error": "No audio files uploaded"}), 400
